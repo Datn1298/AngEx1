@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row" *ngFor="let tc of TotalCost">
+
+    <div class="col-sm-3">
+      <h2>{{tc.currency}} {{tc.monthToDate|number:'.2-2'}}</h2>
+      <p>MONTH TO DATE</p>
+    </div>
+    <div class="col-sm-3">
+      <h2>{{tc.currency}} {{tc.estimatedSpend|number:'.2-2'}}</h2>
+      <p>ESTIMATED SPEND</p>
+    </div>
+    <div class="col-sm-3">
+      <h2>{{tc.currency}} {{tc.lastMonth|number:'.2-2'}}</h2>
+      <p>LAST MONTH</p>
+    </div>
+    <div class="col-sm-3" >
+      <h2 class="lastMonth">{{tc.currency}} {{tc.changeFromLastMonth|number:'.2-2'}}</h2>
+      <p>CHANGE FROM LAST MONTH</p>
+    </div>
+  </div>
+</div>

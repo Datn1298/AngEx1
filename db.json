@@ -1,0 +1,67 @@
+{
+  "totalCost":[
+    {
+      "monthToDate": 2300,
+      "estimatedSpend": 2624.9,
+      "lastMonth": 285.42,
+      "changeFromLastMonth": 2339.083,
+      "currency": "$"
+    }
+  ],
+
+  "servicesBreakdown":[
+    {
+        "EC2":  2055.97 ,
+        "EFS":   250.6 ,
+        "OTHER": 234.32 ,
+        "S3":  500.69 ,
+        "SUPPORT":  120.3,
+        "currency":  "$"
+    }
+  ],
+
+  "ReservationCoverage": [
+    {
+        "id": 1,
+        "instanceType": "T2.MEDIUM",
+        "onDemandHours": 4853.35,
+        "reservedHours": 40
+    },
+    {
+        "id": 2,
+        "instanceType": "T2.NANO",
+        "onDemandHours": 5356.93,
+        "reservedHours": 43.2
+    },
+    {
+        "id": 3,
+        "instanceType": "T2.LARGE",
+        "onDemandHours": 5278.44,
+        "reservedHours": 3
+    },
+    {
+        "id": 4,
+        "instanceType": "M.LARGE",
+        "onDemandHours": 7599.94,
+        "reservedHours": 1.7
+    },
+    {
+        "id": 5,
+        "instanceType": "T2.MICRO",
+        "onDemandHours": 3340.35,
+        "reservedHours": 46
+    },
+    {
+        "id": 6,
+        "instanceType": "M3.MEDIUM",
+        "onDemandHours": 6466.9,
+        "reservedHours": 95.4
+    },
+    {
+        "id": 7,
+        "instanceType": "T2.SMALL",
+        "onDemandHours": 4490.96,
+        "reservedHours": 66.6
+    }
+  ]
+}

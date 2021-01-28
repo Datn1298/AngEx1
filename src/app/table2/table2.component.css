@@ -1,0 +1,21 @@
+h3{
+  color:#1177bf
+}
+
+.onDemandHours{
+  color: red
+}
+
+.reservedHours{
+  color:#0ea753
+}
+
+.data {
+   text-align: center;
+}
+
+td {
+  text-align: left;
+}
+
+

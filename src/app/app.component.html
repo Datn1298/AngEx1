@@ -1,0 +1,51 @@
+<mat-toolbar>
+  <div class="collapsible-header" (click)="isShow=!isShow">
+    <i class="material-icons" *ngIf="isShow">arrow_drop_down</i>
+    <i class="material-icons" *ngIf="!isShow">arrow_right</i>
+  </div>
+  <span>Costing</span>
+</mat-toolbar>
+
+<div *ngIf="isShow; else noShow">
+  <app-total-cost></app-total-cost>
+  <br>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-1">
+      </div>
+
+      <div class="col-5">
+        <app-table1 ></app-table1>
+      </div>
+      <div class="col-5">
+        <doughnut-chart> </doughnut-chart>
+     </div>
+
+    </div>
+  </div>
+
+  <br>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-1">
+      </div>
+      <div class="col-6">
+        <app-table2 ></app-table2>
+      </div>
+
+      <div class="col-5">
+        <app-bar-chart> </app-bar-chart>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<ng-template #noShow>
+  <div>
+  </div>
+</ng-template>
