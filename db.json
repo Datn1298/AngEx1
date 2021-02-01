@@ -41,7 +41,7 @@
     },
     {
         "id": 4,
-        "instanceType": "M.LARGE",
+        "instanceType": "M4.LARGE",
         "onDemandHours": 7599.94,
         "reservedHours": 1.7
     },

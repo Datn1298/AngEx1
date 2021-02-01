@@ -18,6 +18,7 @@ export class DoughnutChartComponent  {
   public doughnutChartType: ChartType = 'doughnut';
 
   public options: any = {
+    responsive: true,
     legend:{
       display: false
     },

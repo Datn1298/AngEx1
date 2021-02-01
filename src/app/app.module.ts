@@ -18,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { TotalCostComponent } from './total-cost/total-cost.component';
 import { MatCardModule } from '@angular/material/card';
 import {ScrollingModule} from '@angular/cdk/scrolling';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    ScrollingModule
+    ScrollingModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

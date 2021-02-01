@@ -1,3 +1,7 @@
 h3{
-  color:#1177bf
+  color:#1177bf;
+}
+
+td {
+  text-align: right;
 }

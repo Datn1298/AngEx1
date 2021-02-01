@@ -1,31 +1,31 @@
-<table class="table" *ngFor="let sb of servicesBreakdown" style="margin-top:11px;">
+<table class="table table-striped" *ngFor="let sb of servicesBreakdown" style="margin-top:11px;">
   <h3>
     <div>SERVICES BREAKDOWN</div>
   </h3>
   <tbody>
     <tr>
-      <th scope="row" box>EC2</th>
-      <td style="text-align: right">{{sb.currency}} {{sb.EC2|number:'0.2-2'}}</td>
+      <th ><button type="button" class="btn btn-primary p-2 rounded-0" style="background-color:blue ;border: none;"></button> EC2</th>
+      <td>{{sb.currency}} {{sb.EC2|number:'0.2-2'}}</td>
     </tr>
     <tr>
-      <th scope="row">EFS</th>
-      <td style="text-align: right">{{sb.currency}} {{sb.EFS |number:'0.2-2'}}</td>
+      <th><button type="button" class="btn btn-primary p-2 rounded-0" style="background-color:green ;border: none;"></button> EFS</th>
+      <td >{{sb.currency}} {{sb.EFS |number:'0.2-2'}}</td>
     </tr>
     <tr>
-      <th scope="row">OTHER</th>
-      <td style="text-align: right">{{sb.currency}} {{sb.OTHER |number:'0.2-2'}}</td>
+      <th><button type="button" class="btn btn-primary p-2 rounded-0" style="background-color: red ;border: none;"></button> OTHER</th>
+      <td>{{sb.currency}} {{sb.OTHER |number:'0.2-2'}}</td>
     </tr>
     <tr>
-      <th scope="row">S3</th>
-      <td style="text-align: right">{{sb.currency}} {{sb.S3 |number:'0.2-2'}}</td>
+      <th><button type="button" class="btn btn-primary p-2 rounded-0" style="background-color: orange ;border: none;"></button> S3</th>
+      <td>{{sb.currency}} {{sb.S3 |number:'0.2-2'}}</td>
     </tr>
     <tr>
-      <th scope="row">SUPPORT</th>
-      <td style="text-align: right">{{sb.currency}} {{sb.SUPPORT |number:'0.2-2'}}</td>
+      <th><button type="button" class="btn btn-primary p-2 rounded-0" style="background-color: yellow ;border: none;"></button> SUPPORT</th>
+      <td>{{sb.currency}} {{sb.SUPPORT |number:'0.2-2'}}</td>
     </tr>
     <tr>
-      <th scope="row">TOTAL</th>
-      <td style="text-align: right">{{sb.currency}} {{sb.EC2 + sb.EFS  + sb.OTHER + sb.S3 + sb.SUPPORT}}</td>
+      <th>TOTAL</th>
+      <td>{{sb.currency}} {{sb.EC2 + sb.EFS  + sb.OTHER + sb.S3 + sb.SUPPORT}}</td>
     </tr>
   </tbody>
 </table>

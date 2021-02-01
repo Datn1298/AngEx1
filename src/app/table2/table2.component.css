@@ -3,7 +3,7 @@ h3{
 }
 
 .onDemandHours{
-  color: red
+  color: #ff0000
 }
 
 .reservedHours{
@@ -18,4 +18,14 @@ td {
   text-align: left;
 }
 
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.mat-sort-header-container {
+  align-items: center;
+}
 

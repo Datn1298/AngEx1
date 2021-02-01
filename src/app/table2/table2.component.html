@@ -3,17 +3,14 @@
 </h3>
 <br>
 <div style="overflow-x:auto;">
-  <table class="table">
-
-    <thead>
+  <table class="table"  matSort (matSortChange)="sortData($event)">
       <tr>
-        <th scope="col">INSTANCE TYPE</th>
-        <th scope="col">ON DEMAND HOURS</th>
-        <th scope="col">RESERVED HOURS</th>
-        <th scope="col">TOTAL HOURS</th>
-        <th scope="col">COVERAGE</th>
+        <th >INSTANCE TYPE</th>
+        <th mat-sort-header="onDemandHours">ON DEMAND HOURS</th>
+        <th mat-sort-header="reservedHours">RESERVED HOURS</th>
+        <th >TOTAL HOURS</th>
+        <th >COVERAGE</th>
       </tr>
-    </thead>
     <tbody *ngFor="let rc of ReservationCoverage" style="margin-top:11px;" >
       <tr>
         <th scope="row">{{rc.instanceType}}</th>
