@@ -1,4 +1,4 @@
-<mat-toolbar>
+<!-- <mat-toolbar>
   <div class="collapsible-header" (click)="isShow=!isShow">
     <i class="material-icons" *ngIf="isShow">arrow_drop_down</i>
     <i class="material-icons" *ngIf="!isShow">arrow_right</i>
@@ -45,4 +45,19 @@
 <ng-template #noShow>
   <div>
   </div>
-</ng-template>
+</ng-template> -->
+
+
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
+      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+</nav>
+
+<!-- main app container -->
+<div class="app-container" [ngClass]="{ 'bg-light': user }">
+  <alert></alert>
+  <router-outlet></router-outlet>
+</div>

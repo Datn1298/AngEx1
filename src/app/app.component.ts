@@ -6,12 +6,18 @@ import { HttpResponse } from '@angular/common/http';
 import { ServicesBreakdown } from './services-breakdown';
 import { ReservationCoverage } from './reservation-coverage';
 import { TotalCost } from './total-cost';
+import { AccountService } from './_services/account.service';
+import { User } from './_models/user';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
+// @Component({
+//   selector: 'app-root',
+//   templateUrl: './app.component.html',
+//   styleUrls: ['./app.component.css']
+// })
+
+@Component({ selector: 'app', templateUrl: 'app.component.html' })
+
+
 export class AppComponent implements OnInit, OnDestroy{
   isShow = false;
   private REST_TOTAL_COST_API_SERVER = 'http://localhost:3000/totalCost';
@@ -27,10 +33,19 @@ export class AppComponent implements OnInit, OnDestroy{
   public static TotalCost : TotalCost[]=[];
   TotalCost : TotalCost[]=[]
 
+  user: User;
+
+  constructor(private accountService: AccountService, private dataService: DataService) {
+    this.accountService.user.subscribe(x => this.user = x);
+  }
+
+  logout() {
+    this.accountService.logout();
+  }
+
 
   destroy$: Subject<boolean> = new Subject<boolean>();
 
-  constructor(private dataService: DataService) { }
 
   ngOnInit() {
     this.getServicesBreakdown();
@@ -66,4 +81,7 @@ export class AppComponent implements OnInit, OnDestroy{
       AppComponent.TotalCost = this.TotalCost;
     })
   }
+
+
 }
+
